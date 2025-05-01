@@ -21,22 +21,24 @@ The project includes the following pages:
 5. **Contact**: Provides contact information or a contact form.
 
 ## File Structure
-PRODIGY_WD_01/ ├── index.html 
+PRODIGY_WD_01/ 
 # Home page 
+├── index.html 
+# About page
 ├── About.html 
-# About page 
-├── portfolio.html 
 # Portfolio page 
+├── portfolio.html 
+# Services page  
 ├── Services.html 
-# Services page 
-├── Contact.html 
 # Contact page 
+├── Contact.html 
+# CSS file for styling
 ├── styles.css 
-# CSS file for styling 
+# JavaScript file for interactivity  
 ├── script.js 
-# JavaScript file for interactivity 
-└── README.md 
 # Project documentation
+└── README.md 
+
 ## Technologies Used
 
 - **HTML5**: For structuring the content.
