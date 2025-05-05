@@ -218,6 +218,9 @@ body.dark .search-field input{
 body.dark .search-field i{
     color: var(--text-color);
 }
+body.dark main{
+    color: var(--text-color);
+}
 @media (max-width: 790px) {
     nav .nav-bar .sidebarOpen{
         display: block;
