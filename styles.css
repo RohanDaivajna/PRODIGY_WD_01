@@ -1,98 +1,132 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.4s ease;;
-}
-/* ===== Colours ===== */
-:root{
-    --body-color: #E4E9F7;
-    --nav-color: orange;
-    --side-nav: #010718;
-    --text-color: #FFF;
-    --search-bar: #F2F2F2;
-    --search-text: #010718;
-}
-body{
-    height: 100vh;
-    background-color: var(--body-color);
-}
-body.dark{
-    --body-color: #18191A;
-    --nav-color: #242526;
-    --side-nav: #242526;
-    --text-color: #CCC;
-    --search-bar: #242526;
+
+/* ===== Global Reset and Default Styles ===== */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: 'Poppins', sans-serif; /* Set default font */
+    transition: all 0.4s ease; /* Smooth transition for all properties */
 }
 
-main {
-    margin-top: 70px; 
-    padding: 20px; 
+/* ===== Colours ===== */
+:root {
+    --body-color: #E4E9F7; /* Light mode body background */
+    --nav-color: orange; /* Navigation bar background */
+    --side-nav: #010718; /* Sidebar background */
+    --text-color: #FFF; /* Default text color */
+    --search-bar: #F2F2F2; /* Search bar background */
+    --search-text: #010718; /* Search bar text color */
 }
-nav{
-    position: fixed;
+
+/* ===== Dark Mode Colours ===== */
+body.dark {
+    --body-color: #18191A; /* Dark mode body background */
+    --nav-color: #242526; /* Dark mode navigation bar background */
+    --side-nav: #242526; /* Dark mode sidebar background */
+    --text-color: #CCC; /* Dark mode text color */
+    --search-bar: #242526; /* Dark mode search bar background */
+}
+
+/* ===== Body Styling ===== */
+body {
+    height: 100vh; /* Full viewport height */
+    background-color: var(--body-color); /* Background color based on mode */
+}
+
+/* ===== Main Content Styling ===== */
+main {
+    margin-top: 70px; /* Space below the fixed navigation bar */
+    padding: 20px; /* Padding around the main content */
+}
+
+/* ===== Navigation Bar Styling ===== */
+nav {
+    position: fixed; /* Fix navigation bar at the top */
     top: 0;
     left: 0;
-    height: 70px;
-    width: 100%;
-    background-color: var(--nav-color);
-    z-index: 100;
+    height: 70px; /* Height of the navigation bar */
+    width: 100%; /* Full width */
+    background-color: var(--nav-color); /* Background color based on mode */
+    z-index: 100; /* Ensure it stays above other elements */
 }
-body.dark nav{
-    border: 1px solid #393838;
+
+/* ===== Dark Mode Navigation Bar Border ===== */
+body.dark nav {
+    border: 1px solid #393838; /* Border for dark mode */
 }
-nav .nav-bar{
+
+/* ===== Navigation Bar Content Styling ===== */
+nav .nav-bar {
     position: relative;
     height: 100%;
-    max-width: 1000px;
+    max-width: 1000px; /* Maximum width of the navigation bar */
     width: 100%;
-    background-color: var(--nav-color);
-    margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: var(--nav-color); /* Background color */
+    margin: 0 auto; /* Center align */
+    padding: 0 30px; /* Horizontal padding */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between items */
 }
-nav .nav-bar .sidebarOpen{
-    color: var(--text-color);
-    font-size: 25px;
-    padding: 5px;
-    cursor: pointer;
-    display: none;
+
+/* ===== Sidebar Toggle Button ===== */
+nav .nav-bar .sidebarOpen {
+    color: var(--text-color); /* Text color */
+    font-size: 25px; /* Font size */
+    padding: 5px; /* Padding around the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: none; /* Hidden by default */
 }
-nav .nav-bar .logo a{
-    font-size: 25px;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
+
+/* ===== Logo Styling ===== */
+nav .nav-bar .logo a {
+    font-size: 25px; /* Font size */
+    font-weight: 500; /* Font weight */
+    color: var(--text-color); /* Text color */
+    text-decoration: none; /* Remove underline */
 }
-.menu .logo-toggle{
-    display: none;
+
+/* ===== Menu Logo Toggle Styling ===== */
+.menu .logo-toggle {
+    display: none; /* Hidden by default */
 }
-.nav-bar .nav-links{
-    display: flex;
-    align-items: center;
+
+/* ===== Navigation Links Styling ===== */
+.nav-bar .nav-links {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
 }
-.nav-bar .nav-links li{
-    margin: 0 5px;
-    list-style: none;
+
+.nav-bar .nav-links li {
+    margin: 0 5px; /* Spacing between links */
+    list-style: none; /* Remove bullet points */
 }
-.nav-links li a{
+
+.nav-links li a {
     position: relative;
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 10px;
+    font-size: 17px; /* Font size */
+    font-weight: 400; /* Font weight */
+    color: var(--text-color); /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding around the link */
 }
-.nav-links li a:hover{
-    color:#010718   ;
-    transition: color 0.3s ease;
+
+/* ===== Hover Effect for Links ===== */
+.nav-links li a:hover {
+    color: black; /* Change text color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
 }
-.nav-links li a::before{
+
+/* ===== Active Link Styling ===== */
+.nav-links li a.active {
+    color: black; /* Highlight color for the active page */
+    font-weight: bold; /* Bold font for active link */
+}
+
+/* ===== Link Hover Indicator ===== */
+.nav-links li a::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -100,171 +134,206 @@ nav .nav-bar .logo a{
     transform: translateX(-50%);
     height: 6px;
     width: 6px;
-    border-radius: 50%;
-    background-color: var(--text-color);
-    opacity: 0;
-    transition: all 0.3s ease;
+    border-radius: 50%; /* Circular indicator */
+    background-color: var(--text-color); /* Indicator color */
+    opacity: 0; /* Hidden by default */
+    transition: all 0.3s ease; /* Smooth transition */
 }
-.nav-links li:hover a::before{
-    opacity: 1;
+
+.nav-links li:hover a::before {
+    opacity: 1; /* Show indicator on hover */
 }
-.nav-links li a.active {
-    color: black; /* Highlight color for the active page */
-    font-weight: bold;
+
+/* ===== Dark/Light Mode Toggle and Search Box ===== */
+.nav-bar .darkLight-searchBox {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-right: 30px; /* Space on the right */
 }
-.nav-bar .darkLight-searchBox{
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-}
+
+/* ===== Dark/Light Mode and Search Toggle Buttons ===== */
 .darkLight-searchBox .dark-light,
-.darkLight-searchBox .searchToggle{
+.darkLight-searchBox .searchToggle {
     height: 40px;
     width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 5px;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin: 0 5px; /* Spacing between buttons */
 }
+
 .dark-light i,
-.searchToggle i{
+.searchToggle i {
     position: absolute;
-    color: var(--text-color);
-    font-size: 22px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    color: var(--text-color); /* Icon color */
+    font-size: 22px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
 }
-.dark-light i.sun{
-    opacity: 0;
-    pointer-events: none;
+
+/* ===== Dark Mode Icon States ===== */
+.dark-light i.sun {
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disable interaction */
 }
-.dark-light.active i.sun{
-    opacity: 1;
-    pointer-events: auto;
+
+.dark-light.active i.sun {
+    opacity: 1; /* Show sun icon in active state */
+    pointer-events: auto; /* Enable interaction */
 }
-.dark-light.active i.moon{
-    opacity: 0;
-    pointer-events: none;
+
+.dark-light.active i.moon {
+    opacity: 0; /* Hide moon icon in active state */
+    pointer-events: none; /* Disable interaction */
 }
-.searchToggle i.cancel{
-    opacity: 0;
-    pointer-events: none;
+
+/* ===== Search Toggle Icon States ===== */
+.searchToggle i.cancel {
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disable interaction */
 }
-.searchToggle.active i.cancel{
-    opacity: 1;
-    pointer-events: auto;
+
+.searchToggle.active i.cancel {
+    opacity: 1; /* Show cancel icon in active state */
+    pointer-events: auto; /* Enable interaction */
 }
-.searchToggle.active i.search{
-    opacity: 0;
-    pointer-events: none;
+
+.searchToggle.active i.search {
+    opacity: 0; /* Hide search icon in active state */
+    pointer-events: none; /* Disable interaction */
 }
-.searchBox{
+
+/* ===== Search Box Styling ===== */
+.searchBox {
     position: relative;
 }
-.searchBox .search-field{
+
+.searchBox .search-field {
     position: absolute;
-    bottom: -85px;
-    right: 5px;
-    height: 50px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    background-color: var(--nav-color);
-    padding: 3px;
-    border-radius: 6px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
+    bottom: -85px; /* Position below the search icon */
+    right: 5px; /* Align to the right */
+    height: 50px; /* Height of the search field */
+    width: 300px; /* Width of the search field */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background-color: var(--nav-color); /* Background color */
+    padding: 3px; /* Padding inside the field */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disable interaction */
+    transition: all 0.3s ease; /* Smooth transition */
 }
-.searchToggle.active ~ .search-field{
-    bottom: -74px;
-    opacity: 1;
-    pointer-events: auto;
+
+.searchToggle.active ~ .search-field {
+    bottom: -74px; /* Adjust position when active */
+    opacity: 1; /* Show search field */
+    pointer-events: auto; /* Enable interaction */
 }
-.search-field::before{
+
+/* ===== Search Field Arrow ===== */
+.search-field::before {
     content: '';
     position: absolute;
     right: 14px;
     top: -4px;
     height: 12px;
     width: 12px;
-    background-color: var(--nav-color);
-    transform: rotate(-45deg);
-    z-index: -1;
+    background-color: var(--nav-color); /* Arrow color */
+    transform: rotate(-45deg); /* Rotate to form an arrow */
+    z-index: -1; /* Place behind the search field */
 }
-.search-field input{
+
+/* ===== Search Input Styling ===== */
+.search-field input {
     height: 100%;
     width: 100%;
-    padding: 0 45px 0 15px;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--search-text);
-    background-color: var(--search-bar);
+    padding: 0 45px 0 15px; /* Padding inside the input */
+    outline: none; /* Remove outline */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    font-weight: 400; /* Font weight */
+    color: var(--search-text); /* Text color */
+    background-color: var(--search-bar); /* Background color */
 }
-body.dark .search-field input{
-    color: var(--text-color);
+
+/* ===== Dark Mode Search Input Styling ===== */
+body.dark .search-field input {
+    color: var(--text-color); /* Text color for dark mode */
 }
-.search-field i{
+
+/* ===== Search Field Icon Styling ===== */
+.search-field i {
     position: absolute;
-    color: var(--nav-color);
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
+    color: var(--nav-color); /* Icon color */
+    right: 15px; /* Align to the right */
+    font-size: 22px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
 }
-body.dark .search-field i{
-    color: var(--text-color);
+
+/* ===== Dark Mode Search Field Icon Styling ===== */
+body.dark .search-field i {
+    color: var(--text-color); /* Icon color for dark mode */
 }
-body.dark main{
-    color: var(--text-color);
+
+/* ===== Dark Mode Main Content Styling ===== */
+body.dark main {
+    color: var(--text-color); /* Text color for dark mode */
 }
+
+/* ===== Responsive Design for Small Screens ===== */
 @media (max-width: 790px) {
-    nav .nav-bar .sidebarOpen{
-        display: block;
+    nav .nav-bar .sidebarOpen {
+        display: block; /* Show sidebar toggle button */
         position: absolute;
-        right: 20px; /* Move it to the right */
-        top: 50%;
-        transform: translateY(-50%);
+        right: 20px; /* Align to the right */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust position */
     }
-    .menu{
-        position: fixed;
-        height: 100%;
-        width: 320px;
-        right: -100%;
+
+    .menu {
+        position: fixed; /* Fix menu position */
+        height: 100%; /* Full height */
+        width: 320px; /* Width of the menu */
+        right: -100%; /* Hide menu by default */
         top: 0;
-        padding: 20px;
-        background-color: var(--side-nav);
-        z-index: 100;
-        transition: all 0.4s ease;
+        padding: 20px; /* Padding inside the menu */
+        background-color: #393838; /* Background color */
+        z-index: 100; /* Ensure it stays above other elements */
+        transition: all 0.4s ease; /* Smooth transition */
     }
-    nav.active .menu{
-        right: 0%;
+
+    nav.active .menu {
+        right: 0%; /* Show menu when active */
     }
+
     .nav-links li a.active {
         color: #ff9800; /* Highlight color for the active page */
-        font-weight: bold;
+        font-weight: bold; /* Bold font for active link */
     }
-    .menu .logo-toggle{
-        display: block;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+
+    .menu .logo-toggle {
+        display: block; /* Show logo toggle */
+        width: 100%; /* Full width */
+        display: flex; /* Flexbox for alignment */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Space between items */
     }
-    .logo-toggle .siderbarClose{
-        color: var(--text-color);
-        font-size: 24px;
-        cursor: pointer;
+
+    .logo-toggle .siderbarClose {
+        color: var(--text-color); /* Text color */
+        font-size: 24px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
     }
-    .nav-bar .nav-links{
-        flex-direction: column;
-        padding-top: 30px;
+
+    .nav-bar .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        padding-top: 30px; /* Space at the top */
     }
-    .nav-links li a{
-        display: block;
-        margin-top: 20px;
+
+    .nav-links li a {
+        display: block; /* Block display for links */
+        margin-top: 20px; /* Space between links */
     }
 }

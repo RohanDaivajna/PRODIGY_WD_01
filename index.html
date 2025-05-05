@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Meta Information:
+        This is the main HTML file for the PRODIGY_WD_01 project.
+        It includes a responsive navigation menu bar and a basic structure for the Home page.
+    -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome CDN -->
+
+    <!-- Font Awesome CDN for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Page Title -->
     <title>Responsive Navigation Menu Bar</title>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <div class="nav-bar">
             <!-- Sidebar Open Icon -->
             <i class="fas fa-bars sidebarOpen"></i>
+
+            <!-- Logo Section -->
             <span class="logo navLogo"><a href="#">PRODIGY_WD_01</a></span>
+
+            <!-- Navigation Menu -->
             <div class="menu">
                 <div class="logo-toggle">
                     <!-- Sidebar Close Icon -->
                     <i class="fas fa-times siderbarClose"></i>
                 </div>
                 <ul class="nav-links">
+                    <!-- Navigation Links -->
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -29,33 +44,37 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
+
+            <!-- Dark Mode Toggle and Search Box -->
             <div class="darkLight-searchBox">
                 <div class="dark-light">
-                    <!-- Moon Icon -->
+                    <!-- Dark Mode Icons -->
                     <i class="fas fa-moon moon"></i>
-                    <!-- Sun Icon -->
                     <i class="fas fa-sun sun"></i>
                 </div>
                 <div class="searchBox">
                    <div class="searchToggle">
-                       <!-- Cancel Icon -->
+                       <!-- Search Toggle Icons -->
                        <i class="fas fa-times cancel"></i>
-                       <!-- Search Icon -->
                        <i class="fas fa-search search"></i>
                    </div>
                     <div class="search-field">
+                        <!-- Search Input Field -->
                         <input type="text" placeholder="Search...">
-                        <!-- Search Icon -->
                         <i class="fas fa-search"></i>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Main Content -->
     <main>
         <h1>Home</h1>
         <p>Welcome to the Home page of PRODIGY_WD_01.</p>
     </main>
+
+    <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
